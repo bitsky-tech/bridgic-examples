@@ -37,7 +37,7 @@ class QueryCategory(BaseModel):
     """One of: 'questionn_answer' (question answering), 'createive_writing' (creative writing), 'code_writing' (code writing), 'unknown' (unrecognized)."""
 
 
-class SimpleRouter(GraphAutoma):
+class SimpleAssistant(GraphAutoma):
     @worker(is_start=True)
     async def router(self, request: str) -> str:
         """
@@ -144,7 +144,7 @@ class SimpleRouter(GraphAutoma):
 
 
 async def main():
-    router = SimpleRouter(running_options=RunningOptions(debug=False))
+    router = SimpleAssistant(running_options=RunningOptions(debug=False))
     test_requests = [
         "When and where was Einstein born?",
         "Create a one-sentence poem about the spring season.",

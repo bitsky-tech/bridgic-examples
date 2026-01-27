@@ -142,7 +142,7 @@ async def router(
     else:
         automa.ferry_to("unknown", original=request)
 
-class SimpleRouter(ASLAutoma):
+class SimpleAssistant(ASLAutoma):
     with graph as g:
         start = router
         hq = handle_question
@@ -153,7 +153,7 @@ class SimpleRouter(ASLAutoma):
         +start, ~hq, ~creative, ~code, ~unknown
 
 async def main():
-    router = SimpleRouter()
+    router = SimpleAssistant()
     test_requests = [
         "When and where was Einstein born?",
         "Create a one-sentence poem about the spring season.",
