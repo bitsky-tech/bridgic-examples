@@ -37,7 +37,7 @@ class RAGProcessor(GraphAutoma):
         """Pre-process the user input."""
         return user_input.strip()
 
-    @worker(key="k", dependencies=["pre_process"])
+    @worker(dependencies=["pre_process"])
     async def keyword_search(self, query: str) -> List[str]:
         """Simulate keyword search by returning a fixed list of chunks."""
         chunks = [
@@ -47,7 +47,7 @@ class RAGProcessor(GraphAutoma):
         ]
         return chunks
 
-    @worker(key="s", dependencies=["pre_process"])
+    @worker(dependencies=["pre_process"])
     async def semantic_search(self, query: str) -> List[str]:
         """Simulate semantic search by returning a fixed list of chunks."""
         chunks = [
@@ -58,7 +58,7 @@ class RAGProcessor(GraphAutoma):
         return chunks
 
     @worker(
-        dependencies=["k", "s"],
+        dependencies=["keyword_search", "semantic_search"],
         args_mapping_rule=ArgsMappingRule.MERGE,
         is_output=True
     )
