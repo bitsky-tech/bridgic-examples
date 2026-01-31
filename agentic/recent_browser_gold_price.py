@@ -109,11 +109,11 @@ async def main():
             "Find the recent gold prices on Hong Kong Gold Exchange website."
         ),
         guidance=(
-            "Do the following steps one by one:\n"
+            "Execute the following steps strictly sequentially; do not perform any two steps in parallel.\n"
             "1. Navigate to https://hkgx.com.hk/en\n"
             "2. Hover on the 'Market & Data' button to show more button options\n"
-            "3. Click the 'History Price' button to access the historical price page\n"
-            "4. Since the current date was selected, only need to select the option of RMB-denominated kilo gold\n"
+            "3. Click the 'Price History' button to access the historical price page\n"
+            "4. As the current date is already selected, simply select the “RMB Kilo Gold” option.\n"
             "5. Click the search button and have a look at the recent gold price trends\n"
             "6. Close the browser and give out a summary of recent gold price trends\n"
         ),
@@ -126,6 +126,9 @@ async def main():
     playwright_connection.close()
     print(f"\n✓ Connection closed: {not playwright_connection.is_connected}")
 
+
+# from bridgic.traces.langwatch import start_langwatch_trace
+# start_langwatch_trace()
 
 if __name__ == "__main__":
     import asyncio

@@ -5,7 +5,9 @@ description = "Example code using the Bridgic framework."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "bridgic>=0.1.3",
+    "bridgic==0.3.0b1",
     "bridgic-llms-openai>=0.1.1",
     "bridgic-traces-langwatch>=0.1.1",
+    "bridgic-protocols-mcp>=0.1.1",
+    "dotenv>=0.9.9",
 ]
