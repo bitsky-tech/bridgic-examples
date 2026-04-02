@@ -19,3 +19,6 @@
 
 ## 其他要求
  - 生成一个README文件，详细说明生成的程序的用法.
+
+## 验证策略
+ - 程序生成后，至少验证 repo_name="openclaw/openclaw" 和 repo_name="bitsky-tech/bridgic-browser" 两种情况。
