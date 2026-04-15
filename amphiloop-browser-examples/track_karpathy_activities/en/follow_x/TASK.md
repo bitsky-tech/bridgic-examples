@@ -14,7 +14,7 @@ Retrieve posts from the past few days on Andrej Karpathy's X profile and save th
 ## Expected Output
 `x_posts.md`: posts by Andrej Karpathy within the specified time range, in reverse chronological order and Markdown format; Pinned posts and ads are skipped, and reposts correctly record the original author.
 
-## Notes (optional)
+## Notes
 - Parameters:
   - The time range (in days) should be a parameter of the generated program, with a default of 7 days.
   - Whether to use a headed browser should also be a parameter of the generated program.

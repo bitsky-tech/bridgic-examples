@@ -11,7 +11,7 @@ Track recent activity on Andrej Karpathy's GitHub profile and save the results t
 ## Expected Output
 `github_activities.json`: Andrej Karpathy's GitHub contribution activities within the specified time range, in reverse chronological order and JSON format.
 
-## Notes (optional)
+## Notes
 - Parameters:
   - The time range (in days) should be a parameter of the generated program, with a default of 7 days.
   - Whether to use a headed browser should also be a parameter of the generated program.

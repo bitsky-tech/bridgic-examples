@@ -13,7 +13,7 @@ Search Google News for news about Andrej Karpathy, browse the first few pages, a
 ## Expected Output
 `google_search_results.json`: all Google News search results across the specified number of pages, each entry containing title, original link, snippet, and time, saved in JSON format.
 
-## Notes (optional)
+## Notes
 - Parameters:
   - The number of pages to browse should be a parameter of the generated program.
   - Whether to use a headed browser should also be a parameter of the generated program.

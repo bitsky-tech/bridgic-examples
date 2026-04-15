@@ -13,7 +13,7 @@ Fetch the release information of a specified GitHub repository over the past N d
 - `releases_data.md`: the release records within the specified time range, in reverse chronological order and Markdown format, containing release name, date, and description.
 - `report.md`: a Markdown summary report, no more than 400 words, beginning with an overall summary followed by briefings on key releases.
 
-## Notes (optional)
+## Notes
 - Parameter requirements:
   - The repository name `repo_name` should be a parameter of the generated program.
   - The specified time range (in days) should be a parameter of the generated program, with a default of 7 days.
